@@ -1,0 +1,120 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; // => 10px = 1rem
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-size: 16px; // tuỳ thiết kế
+    font-family: pr; // tuỳ thiết kế
+    line-height: 22px;
+    letter-spacing: var(--lt-25);
+    color: var(--grey-cl); // tuỳ thiết kế
+    background-color: var(--white-cl);
+    main {}
+    .container-fluid {
+        width: 100%;
+        padding-right: var(--gap);
+        padding-left: var(--gap);
+        margin-right: auto;
+        margin-left: auto;
+        @include xs {
+            padding-right: calc(var(--gap) / 2);
+            padding-left: calc(var(--gap) / 2);
+        }
+    }
+    .container {
+        width: 100%;
+        padding-right: calc(var(--gap) / 2);
+        padding-left: calc(var(--gap) / 2);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @media (min-width: $xxs-min) {
+        .container {
+            max-width: 540px;
+        }
+    }
+    @media (min-width: $xs-min) {
+        .container {
+            max-width: 720px;
+        }
+    }
+    @media (min-width: $sm-min) {
+        .container {
+            max-width: 960px;
+        }
+    }
+    @media (min-width: $md-min) {
+        .container {
+            max-width: $container-width;
+        }
+    }
+    main {
+        width: 100%;
+        margin: auto;
+        @include visible;
+    }
+    @include lg {
+        // CSS responsive large desktop
+    }
+    @include md {
+        // CSS responsive desktop
+    }
+    @include sm {
+        // CSS responsive tablet
+    }
+    @include xs {
+        // CSS responsive mobile
+    }
+    @include xxs {
+        // CSS responsive small mobile
+    }
+}
+
+//html {
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+//     -webkit-text-rendering: optimizeSpeed;
+//     text-rendering: optimizeSpeed;
+// }
+// body {
+//     width: 100%;
+//     font-size: 16px; // tuỳ thiết kế
+//     font-family: pr; // tuỳ thiết kế
+//     line-height: 22px;
+//     letter-spacing: var(--lt-25);
+//     color: var(--grey2-cl); // tuỳ thiết kế
+//     background-color: var(--white-cl);
+//     .container {
+//         width: 100%;
+//         max-width: var(--max-width-container);
+//         padding-right: var(--gap);
+//         padding-left: var(--gap);
+//         margin-right: auto;
+//         margin-left: auto;
+//         position: relative;
+//     }
+//     .container-fluid {
+//         width: 100%;
+//         // max-width: 2560px;
+//         padding-right: var(--gap);
+//         padding-left: var(--gap);
+//         margin-right: auto;
+//         margin-left: auto;
+//         position: relative;
+//     }
+// }

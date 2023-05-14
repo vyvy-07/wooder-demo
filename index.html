@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooder</title>
+    <style>
+        .load {
+            background-color: #000;
+            width: 100%;
+            height: 100vh;
+            z-index: 10000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .load.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    </style>
+    <link rel="icon" type="favicon" href="img/favicon.ico">
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- meta tag facebook -->
+    <meta property="og:url" content="">
+    <meta property="og:type" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <!-- meta tag twitter -->
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <!-- nhúng css-->
+    <link rel="stylesheet" href="./dest/style.min.css">
+    <link rel="stylesheet" href="dest/font.css">
+</head>
+
+<div class="load active"></div>
+
+<body class="body">
+    <div class="scrollBar">
+    </div>
+    <header class="header">
+        <div class="container-fluid">
+            <a href="#" class="header__logo">
+                <img srcset="img/logo.png 2x" alt="" class="logo">
+                <h1 class="hidden">Wooder</h1>
+            </a>
+            <ul class="header__nav">
+                <li class="header__nav-item ">
+                    <a class="link" href="#slider">Slider</a>
+                </li>
+                <li class="header__nav-item ">
+                    <a class="link" href="#scproduct">Product</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="link" href="#scquality">
+                        Video
+                    </a>
+                </li>
+
+                <li class="header__nav-item">
+                    <a class="link" href="#scabout">
+                        About Us
+                    </a>
+                </li>
+
+                <li class="header__nav-item">
+                    <a class="link" href="#scgallary">
+                        Gallary
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="link " href="#scnews">
+                        News
+                    </a>
+                </li>
+            </ul>
+            <div class="header__right">
+                <div class="language">
+                    <div class="language__text">
+                        <span>EN</span>
+                        <img srcset="img/down.png 2x" alt="" class="icondown">
+                    </div>
+                    <ul class="language__dropdown">
+                        <a href="#" class="language__dropdown-item">
+                                VN
+                            </a>
+                        <a href="#" class="language__dropdown-item">
+                                AU
+                            </a>
+                        <a href="#" class="language__dropdown-item">
+                                JP
+                            </a>
+                        <a href="#" class="language__dropdown-item">
+                                KR
+                            </a>
+                    </ul>
+                </div>
+                <div class="btnmenu"><span></span></div>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li class="header__nav-item ">
+                    <a href="# ">Home</a>
+                </li>
+                <li class="header__nav-item ">
+                    <a href="# ">
+                        About
+                    </a>
+                </li>
+                <li class="header__nav-item ">
+                    <a href="# ">
+                        Gallery
+                    </a>
+                </li>
+
+                <li class="header__nav-item ">
+                    <a href="# ">
+                        Products
+                    </a>
+                </li>
+                <li class="header__nav-item ">
+                    <a href="# ">
+                        News
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="ontop">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+            <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+            <g><path d="M507.5,287.8v-6.4h-15.1v6.4l0,0L296.1,464.6l10.1,11.2l186.3-167.7v395.5h15.1V308.1l186.3,167.7l10.1-11.2L507.5,287.8z M990,500c0-270.6-219.4-490-490-490S10,229.4,10,500s219.4,490,490,490S990,770.6,990,500z M25.1,500C25.1,237.7,237.7,25.1,500,25.1S974.9,237.7,974.9,500S762.3,974.9,500,974.9S25.1,762.3,25.1,500z"/></g>
+            </svg>
+    </div>
+    <main class="main ">
+        <section class="slider">
+            <div class="slider__list">
+                <div class="slider__list-item">
+                    <img class="bgr " src="img/slide.jpg " alt="Wooder ">
+                    <div class="textbox ">
+                        <h2 class="textbox__title ">Wooder1</h2>
+                        <a href="# " class="more ">
+                            <span>Learn more</span>
+                            <img class="icon " srcset="img/next.png 2x " alt="Wooder ">
+                        </a>
+                    </div>
+                </div>
+                <div class="slider__list-item">
+                    <img class="bgr " src="img/slide2.jpg " alt="Wooder ">
+                    <div class="textbox ">
+                        <h2 class="textbox__title ">Wooder 2</h2>
+                        <a href="# " class="more ">
+                            <span>Learn more</span>
+                            <img class="icon " srcset="img/next.png 2x " alt="Wooder ">
+                        </a>
+                    </div>
+                </div>
+                <div class="slider__list-item">
+                    <img class="bgr " src="img/slide3.jpg " alt="Wooder ">
+                    <div class="textbox ">
+                        <h2 class="textbox__title ">Wooder3</h2>
+                        <a href="# " class="more ">
+                            <span>Learn more</span>
+                            <img class="icon " srcset="img/next.png 2x " alt="Wooder ">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__bottom ">
+                <div class="container-fluid ">
+                    <div class="slider__bottom-paging ">
+                        <div class="text">01</div>
+                        <!-- <ol class="dot ">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol> -->
+                    </div>
+                    <div class="slider__bottom-mouse">
+                        <img class="m " srcset="img/mouse.png 2x " alt=" ">
+                        <img class="m move" srcset="img/line-mouse.png 2x " alt=" ">
+                    </div>
+                    <div class="slider__bottom-control ">
+                        <div class="slider__bottom-control-btn pre ">
+                            <img srcset="img/next.png 2x " alt=" ">
+                        </div>
+                        <div class="slider__bottom-control-btn next">
+                            <img srcset="img/next.png 2x " alt=" ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="scproduct pd">
+            <div class="container ">
+                <div class="scproduct__product-item --right">
+                    <div class="img ">
+                        <img src="img/produc1.jpg " alt=" ">
+                    </div>
+                    <div class="content ">
+                        <h3 class="title title-h3 ">Furniture</h3>
+                        <p class="text ">Wooder utilizes materials otherwise left behind, rendered useless in their original intent. By creating new pieces made </p>
+                        <a href="# " class="more ">
+                            <p>Learn more</p>
+                            <img srcset="img/arrow.png 2x " alt="Wooder ">
+                        </a>
+                    </div>
+                </div>
+                <div class="scproduct__product-item">
+                    <div class="img ">
+                        <img src="img/product2.jpg " alt=" ">
+                    </div>
+                    <div class="content ">
+                        <h3 class="title title-h3 ">Decor</h3>
+                        <p class="text ">We make all types of wooden decor as per design given by Architect,Interior designer, contractor which is suitable your premises. </p>
+                        <a href="# " class="more ">
+                            <p>Learn more</p>
+                            <img srcset="img/arrow.png 2x " alt="Wooder ">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="scquality">
+            <div class="container ">
+                <div class="scquality__heading ">
+                    <h3 class="scquality__heading-title title-h3 ">wooder &#8208; is quality</h3>
+                    <p class="scquality__heading-text ">We create unique design objects made of rare wood, specially under the order. Look at the short video about our work.</p>
+                </div>
+                <div class="scquality__video ">
+                    <div class="scquality__video-item ">
+                        <div class="thumb " data-video-src="30Nf7OYu6Xc">
+                            <div class="img ">
+                                <img src="img/Bgr-video1.jpg"></img>
+                            </div>
+                            <div class="play ">
+                                <img srcset="img/play.png 2x " class="play__icon --db " alt=" ">
+
+                            </div>
+                        </div>
+                        <h3 class="content ">Innovative Design</h3>
+                    </div>
+                    <div class="scquality__video-item ">
+                        <div class="thumb " data-video-src="8-KalRPhCxc">
+                            <div class="img ">
+                                <img src="img/Bgr-video2.jpg "></img>
+
+                            </div>
+                            <div class="play">
+                                <img srcset="img/play.png 2x " class="play__icon --db " alt=" ">
+                            </div>
+                        </div>
+                        <h3 class="content ">Innovative Design</h3>
+                    </div>
+                    <div class="scquality__video-item ">
+                        <div class="thumb " data-video-src="v86bwAYDcHI">
+                            <div class="img ">
+                                <img src="img/Bgr-video3.jpg "></img>
+                            </div>
+                            <div class="play ">
+                                <img srcset="img/play.png 2x " class="play__icon --db " alt=" ">
+                            </div>
+                        </div>
+                        <h3 class="content ">Innovative Design</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="scwooder" style="background-image: url(img/wooder-img.jpg); ">
+            <div class="container ">
+                <div class="scwooder__heading ">
+                    <h3 class="scwooder__heading-title title-h3 ">We Do the design<br> of any complexity</h3>
+                    <div class="scwooder__heading-text ">
+                        <p>This is a team of professionals that make the furniture and <br>wood décor high standard. Creating modern designs. </p>
+                        <p>Adhering to the global quality standards. And we are doing work with love.</p>
+                    </div>
+                    <a href="# " class="scwooder__heading-btn ">
+                        <div class="play ">
+                            <img srcset="img/playsm.png 2x " alt=" ">
+                        </div>
+                        <div>watch video</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="scabout pd">
+            <div class="container ">
+                <div class="scabout__product-item">
+                    <div class="img ">
+                        <img src="img/man.jpg " alt=" ">
+                    </div>
+                    <div class="content ">
+                        <h3 class="title title-h3 ">About us</h3>
+                        <p class="text ">We are a team of professionals in the wood processing and the creation of wooden furniture of the highest class</p>
+                        <a href="# " class="more ">
+                            <p>Learn more</p>
+                            <img srcset="img/arrow.png 2x " alt="Wooder ">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section class="scgallary pd">
+            <div class="container ">
+                <div class="scgallary__heading ">
+                    <h2 class="scgallary__heading-title title-h3 ">Gallery</h2>
+                    <p class="scgallary__heading-text ">We are a team of professionals in the wood processing and the creation of wooden furniture of the highest class</p>
+                </div>
+                <div class="scgallary__img ">
+                    <a href="img/gallary1-g.jpg " class="scgallary__img-item" data-fancybox="gallery-item"><img src="img/gallary1.jpg " alt=" "></a>
+                    <a href="img/gallary3-g.jpg " class="scgallary__img-item" data-fancybox="gallery-item"><img src="img/gallary2.jpg " alt=" "></a>
+                    <a href="img/gallary3.jpg " class="scgallary__img-item" data-fancybox="gallery-item"><img src="img/gallary3.jpg " alt=" "></a>
+                    <a href="img/gallary4-g.jpg " class="scgallary__img-item" data-fancybox="gallery-item"><img src="img/gallary4.jpg " alt=" "></a>
+                    <a href="img/gallary5-g.jpg " class="scgallary__img-item" data-fancybox="gallery-item"><img src="img/gallary5.jpg " alt=" "></a>
+                </div>
+            </div>
+        </section>
+        <section class="scnews pd">
+            <div class="container">
+                <div class="scnews__heading ">
+                    <h3 class="title title-h3 ">News</h3>
+                    <p class="text ">This is a team of professionals that make the furniture and wood décor high standard. Creating modern designs. Adhering to the global quality standards. And we are doing work with love.</p>
+                </div>
+                <div class="scnews__btn">
+                    <div class="scnews__btn-item in active" data-tab="1">Internal</div>
+                    <div class="scnews__btn-item ex" data-tab="2">External</div>
+                    <div class="scnews__btn-item all" data-tab="3">all</div>
+
+                </div>
+                <div class="list-wrap">
+                    <div class="scnews__list list-1 active">
+                        <div class="scnews__list-item ">
+                            <a href="# " class="img ">
+                                <img src="img/news1.jpg " alt=" ">
+                            </a>
+                            <div class="content ">
+                                <a href="#" class="title ">Where does we are doing work with lovepiece of classic it come from? trary to popular belief, Lorem Ip</a>
+                                <p class="text ">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a This is a team of professionals that make the furniture and wood décor high standard. Creating modern designs. Adhering to the global
+                                    quality standards. And we are doing work with lovepiece of classical Latin literatur</p>
+                            </div>
+                        </div>
+                        <div class="scnews__list-item ">
+                            <a href="# " class="img ">
+                                <img src="img/news2.jpg " alt=" ">
+                            </a>
+                            <div class="content ">
+                                <a href="#" class="title ">There are many variations of passages</a>
+                                <p class="text ">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literatur...</p>
+                            </div>
+                        </div>
+                        <div class="scnews__list-item ">
+                            <a href="# " class="img ">
+                                <img src="img/news3.jpg " alt=" ">
+                            </a>
+                            <div class="content ">
+                                <a href="#" class="title ">It is a long established fact that a reader</a>
+                                <p class="text ">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literatur...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scnews__list list-2">
+                        <div class="scnews__list-item ">
+                            <a href="# " class="img ">
+                                <img src="img/gallary1.jpg " alt=" ">
+                            </a>
+                            <div class="content ">
+                                <a href="#" class="title ">Where does we are doing work with lovepiece of classic it come from? trary to popular belief, Lorem Ip</a>
+                                <p class="text ">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a This is a team of professionals that make the furniture and wood décor high standard. Creating modern designs. Adhering to the global
+                                    quality standards. And we are doing work with lovepiece of classical Latin literatur...</p>
+                            </div>
+                        </div>
+                        <div class="scnews__list-item ">
+                            <a href="# " class="img ">
+                                <img src="img/gallary2.jpg " alt=" ">
+                            </a>
+                            <div class="content ">
+                                <a href="#" class="title ">There are many variations of passages</a>
+                                <p class="text ">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literatur...</p>
+                            </div>
+                        </div>
+                        <div class="scnews__list-item ">
+                            <a href="# " class="img ">
+                                <img src="img/gallary3.jpg " alt=" ">
+                            </a>
+                            <div class="content ">
+                                <a href="#" class="title ">It is a long established fact that a reader</a>
+                                <p class="text ">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literatur...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scnews__list list-3">
+                        <div class="scnews__list-item ">
+                            <a href="# " class="img ">
+                                <img src="img/gallary4.jpg " alt=" ">
+                            </a>
+                            <div class="content ">
+                                <a href="#" class="title ">Where does we are doing work with lovepiece of classic it come from? trary to popular belief, Lorem Ip</a>
+                                <p class="text ">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a This is a team of professionals that make the furniture and wood décor high standard. Creating modern designs. Adhering to the global
+                                    quality standards. And we are doing work with lovepiece of classical Latin literatur...</p>
+                            </div>
+                        </div>
+                        <div class="scnews__list-item ">
+                            <a href="# " class="img ">
+                                <img src="img/gallary5.jpg " alt=" ">
+                            </a>
+                            <div class="content ">
+                                <a href="#" class="title ">There are many variations of passages</a>
+                                <p class="text ">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literatur...</p>
+                            </div>
+                        </div>
+                        <div class="scnews__list-item ">
+                            <a href="# " class="img ">
+                                <img src="img/man.jpg " alt=" ">
+                            </a>
+                            <div class="content ">
+                                <a href="#" class="title ">It is a long established fact that a reader</a>
+                                <p class="text ">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literatur...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="accordion pd">
+            <div class="container">
+                <div class="scnews__heading ">
+                    <h3 class="title title-h3 "><span class="-cl">frequently</span> asked Questions</h3>
+                </div>
+                <div class="accordion__list">
+                    <div class="accordion__list-item">
+                        <div class="title">Which company do you work for?</div>
+                        <div class="panel">
+                            <p>Đối với hình thức học Offline hoặc Online cùng lớp offline thông qua Google Meet thì học viên có thể hỏi trực tiếp trong lúc học, cũng như là hỏi trên nhóm chat Telegram của lớp bạn đang học, giảng viên và mentor sẽ hỗ trợ
+                            </p>
+                            <p>
+                                Giảng viên và mentor sẽ hỗ trợ 24/7. Đối với hình thức học Video, học viên có thể đặt câu hỏi thông qua nhóm chat Telegram hỗ trợ học viên của đội ngũ giảng viên và mentor CFD Circle.</p>
+                        </div>
+                    </div>
+                    <div class="accordion__list-item">
+                        <div class="title">Would you consider making us a more favorable offer?</div>
+                        <div class="panel">
+                            <p>Đối với hình thức học Oạy online của giảng viên,
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="accordion__list-item">
+                        <div class="title">Where are you coming from?</div>
+                        <div class="panel">
+                            <p>Đối với hình thức học Offline hoặc Online cùng lớp offline thông qua Google Meet thì học viên có thể hỏi trực tiếp trong lúc học, cũng như là hỏi trên nhóm chat Telegram của lớp bạn đang học, giảng viên và mentor sẽ hỗ trợ
+                                24/7. Đối với hình thức học Video Mentor, học viên có thể đặt câu hỏi trong các buổi dạy online của giảng viên,
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion__list-item">
+                        <div class="title">Would it be possible for us to visit your office to discuss…?</div>
+                        <div class="panel">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="slider-wrapper">
+            <div class="album-img pd">
+                <img class="album_item" data-flickity-lazyload="img/album1.jpg " alt=" ">
+                <img class="album_item" data-flickity-lazyload="img/album2.jpg " alt=" ">
+                <img class="album_item" data-flickity-lazyload="img/album3.jpg " alt=" ">
+                <img class="album_item" data-flickity-lazyload="img/album4.jpg " alt=" ">
+            </div>
+            <div class="progress">
+                <div class="progress-bar-album"></div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer ">
+        <div class="container ">
+            <div class="footer__text ">
+                <p>© 2016 WOODER, Demo by CFD</p>
+            </div>
+            <div class="footer__logo">
+                <a href="# " class="img"><img srcset="img/logo.png 2x " alt=" "></a>
+            </div>
+            <a href="# " class="footer__return ">back to top</a>
+        </div>
+    </footer>
+    <div class="popupvideo">
+        <div class="popupvideo__inner">
+            <div class="popupvideo__inner-iframe">
+                <iframe width="100%" height="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="popupvideo__inner-close">
+                    <img src="img/close.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dest/jsmain.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

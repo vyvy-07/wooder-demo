@@ -1,0 +1,247 @@
+.header {
+    --height-header: 80px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient( 180deg, rgba(0, 0, 0, 0.8155637254901961) 0%, rgba(0, 0, 0, 0.07886904761904767) 91%, rgba(0, 0, 0, 0) 98%);
+    height: var(--height-header);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    @include trans;
+    &.active {
+        background: var(--black-cl);
+    }
+    .container-fluid {
+        @include dflex;
+        height: 100%;
+        justify-content: space-between;
+    }
+    &__logo {
+        @include dflex;
+        .hidden {
+            display: none;
+        }
+    }
+    &__nav {
+        height: 100%;
+        position: absolute;
+        // @include imgpst;
+        left: 50%;
+        transform: translateX(-50%);
+        @include dflex;
+        &-item {
+            height: 100%;
+            white-space: nowrap;
+            a {
+                @include dflex;
+                height: 100%;
+                text-decoration: none;
+                color: var(--white-cl);
+                font-size: var(--fs15);
+                padding: 0 15px;
+                font-family: pb;
+                text-transform: uppercase;
+                @include trans;
+                // &:hover {
+                //     color: var(--brown-cl);
+                //     @include trans;
+                // }
+                &:hover {
+                    color: var(--brown-cl);
+                    // @include trans;
+                }
+                &.active {
+                    color: var(--brown-cl);
+                    @include trans;
+                }
+            }
+        }
+    }
+    &__right {
+        // display: inline-flex;
+        @include dflex;
+        .language {
+            font-size: 16px;
+            position: relative;
+            font-family: pb;
+            color: var(--white-cl);
+            @include dflex;
+            height: 100%;
+            // opacity: 0;
+            @include trans;
+            cursor: pointer;
+            &__text {
+                @include dflex;
+                span {
+                    margin-right: 3px;
+                }
+                .icondown {
+                    transform: rotateX(0);
+                    @include trans;
+                }
+            }
+            &__dropdown {
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translate(-50%, 100%);
+                background: var(--black-cl);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                @include trans;
+                &-item {
+                    font-size: 15px;
+                    font-family: pb;
+                    color: var(--white-cl);
+                    text-decoration: none;
+                    padding: 5px 30px;
+                    display: block;
+                    &:hover {
+                        a {
+                            color: var(--brown-cl);
+                        }
+                    }
+                }
+            }
+            &.active {
+                .language__text {
+                    .icondown {
+                        transform: rotateX(180deg);
+                        @include trans;
+                    }
+                }
+                .language__dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                    @include trans;
+                }
+            }
+        }
+        .btnmenu {
+            position: relative;
+            margin-left: 20px;
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 300;
+            @include trans;
+            &::before {
+                content: "";
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: $white-cl;
+                margin-bottom: 3px;
+                transform: rotate(0);
+                @include trans;
+            }
+            span {
+                content: "";
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: $white-cl;
+                margin-bottom: 3px;
+            }
+            &::after {
+                transform: rotate(0);
+                content: "";
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: $white-cl;
+                @include trans;
+            }
+            &.active {
+                // margin-left: 0;
+                // margin-right: 20px;
+                @include trans;
+                &::before {
+                    transform: rotate(45deg) translate(9px, -2px);
+                }
+                span {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                &::after {
+                    transform: rotate(-45deg) translate(9px, 2px);
+                }
+            }
+        }
+    }
+    .menu {
+        @include trans;
+        @include dflex;
+        opacity: 0;
+        visibility: hidden;
+        width: 100vw;
+        height: calc(100vh - var(--height-header));
+        background: #1c1c1c;
+        position: fixed;
+        z-index: 100;
+        pointer-events: none;
+        ul {
+            li {
+                // cursor: pointer;
+                // padding: 30px;
+            }
+        }
+    }
+}
+
+@include sm {
+    .header {
+        --height-header: 60px;
+        background-color: var(--black-cl);
+        z-index: 400;
+        &__logo {
+            img {
+                width: 180px;
+            }
+        }
+        &__nav {
+            display: none;
+            // &-item {
+            //     a {
+            //         padding: 0 15px;
+            //     }
+            // }
+        }
+        &__right {
+            .language {
+                .language__dropdown {
+                    left: 30%;
+                }
+            }
+            .btnmenu {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+                cursor: pointer;
+            }
+        }
+        .menu {
+            &.active {
+                @include trans;
+                @include dflex;
+                opacity: 1;
+                visibility: visible;
+                width: 100vw;
+                height: calc(100vh - var(--height-header));
+                background: #1c1c1c;
+                position: fixed;
+                z-index: 100;
+                pointer-events: auto;
+                ul {
+                    li {
+                        cursor: pointer;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

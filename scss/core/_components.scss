@@ -1,0 +1,190 @@
+.scrollBar {
+    width: 0;
+    height: 4px;
+    background: var(--brown-cl);
+    position: fixed;
+    z-index: 400;
+    top: 0;
+    left: 0;
+}
+
+.ontop {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: 60px;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 100%;
+    visibility: hidden;
+    pointer-events: none;
+    @include trans;
+    svg {
+        pointer-events: none;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 52px;
+        height: 52px;
+    }
+    // // opacity: 0;
+    &.backtotop {
+        bottom: 50px;
+        pointer-events: auto;
+        opacity: 1;
+        visibility: initial;
+        z-index: 90;
+        background-color: var(--white-cl);
+        cursor: pointer;
+        @include trans;
+        svg {
+            pointer-events: auto;
+            opacity: 1;
+            visibility: initial;
+            cursor: pointer;
+        }
+    }
+}
+
+.pd {
+    padding-top: 55px;
+    padding-bottom: 90px;
+    // padding: var(--pd-section);
+}
+
+.title-h3 {
+    --fs-tt: 40px;
+    line-height: 83px;
+    font-size: var(--fs-tt);
+    font-family: pb;
+    text-transform: uppercase;
+    letter-spacing: var(--lt-40-70);
+    color: var(--black-cl);
+    @include xs {
+        --fs-tt: 30px;
+        line-height: 50px;
+        font-size: var(--fs-tt);
+    }
+}
+
+.scabout,
+.scproduct {
+    &__product-item {
+        @include dflex;
+        justify-content: space-between;
+        .img {
+            img {
+                width: 520px;
+            }
+        }
+        .content {
+            // flex: 1;
+            padding-right: 100px;
+            text-align: end;
+            color: var(--grey2-cl);
+            max-width: 494px;
+            padding-left: 60px;
+            .title {
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 80px;
+                    display: block;
+                    border-bottom: 1px solid var(--black-cl);
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -99px;
+                }
+            }
+        }
+        .more {
+            justify-content: end;
+            color: var(--black-cl);
+            p {
+                &::after {
+                    content: "";
+                    width: 37px;
+                    display: block;
+                    border-bottom: 2px solid var(--brown-cl);
+                    position: absolute;
+                    bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+.more {
+    text-decoration: none;
+    @include dflex;
+    font-family: pb;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--white-cl);
+    line-height: 58px;
+    letter-spacing: 2.8px;
+    @include trans;
+    p {
+        margin-right: 10px;
+        position: relative;
+    }
+    &:hover {
+        color: var(--brown-cl);
+    }
+}
+
+@include sm {
+    .scabout,
+    .scproduct {
+        &__product-item {
+            .img {
+                img {
+                    max-width: initial;
+                    width: 400px;
+                }
+            }
+            .content {
+                padding-left: 20px;
+                padding-right: 0;
+                .title {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include xs {
+    .scabout,
+    .scproduct {
+        position: relative;
+        &__product-item {
+            @include dflex;
+            flex-direction: column;
+            padding-right: 0;
+            padding-left: 50px;
+            .img {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+            .content {
+                padding-left: 0;
+                padding-left: 0;
+                max-width: inherit;
+                margin-left: 0;
+                .title {
+                    &::after {}
+                }
+            }
+        }
+    }
+}

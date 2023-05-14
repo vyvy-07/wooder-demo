@@ -1,0 +1,49 @@
+* {
+    --brown-cl: #bea67c;
+    --white-cl: #ffffff;
+    --black-text: #000000;
+    --black-cl: #010101;
+    --grey-cl: #636262;
+    --grey2-cl: #464646;
+    --fs83: 83px;
+    --fs40: 40px;
+    --fs15: 15px;
+    --fs14: 14px;
+    --fs16: 16px;
+    --time-transition: 0.4s;
+    --gap: 30px;
+    --max-width-container: 1010px;
+    --lt-25: 0.4px;
+    --lt-40-70: 2.8px;
+    --mw-heading: 500px;
+    --pd-section: 90px 0;
+}
+
+$brown-cl: #bea67c;
+$white-cl: #ffffff;
+$black-cl: #010101;
+$grey-cl: #c0c0c0;
+$grey2-cl: #464646;
+// $height: 600px;
+// $fs83: 83px;
+$fs40: 40px;
+$fs15: 15px;
+$fs13: 13px;
+$fs16: 16px;
+$container-max-width: 1010px;
+$container-width: 1040px;
+$max-width: 1920px;
+$pd-section: 50px 0;
+
+/*GRID - media queries breakpoints*/
+
+$xxs-min: 576px; // CÓ THỂ TÙY CHỈNH
+$xs-min: 768px; // KHÔNG THAY ĐỔI
+$sm-min: 992px; // KHÔNG THAY ĐỔI
+$md-min: 1200px; // KHÔNG THAY ĐỔI
+$lg-min: 1600px; // CÓ THỂ TÙY CHỈNH
+$xxs-max: ($xxs-min - 1); // Small Mobile
+$xs-max: ($xs-min - 1); // Mobile
+$sm-max: ($sm-min - 1); // Tablet
+$md-max: ($md-min - 1); // Desktop
+$lg-max: ($lg-min - 1); // Large Desktop

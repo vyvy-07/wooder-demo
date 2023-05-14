@@ -1,0 +1,15 @@
+// core variables & mixins
+@import'core/reset';
+@import'core/variables';
+@import'core/mixins';
+@import'core/layouts';
+@import'core/elements';
+@import'core/components';
+@import'core/libs';
+@import'core/loading';
+// navigation, headere,footer
+@import'core/header';
+@import'core/nav';
+@import'core/footer';
+// pages
+@import'pages/home';
