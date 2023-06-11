@@ -486,9 +486,7 @@
     height: 100%;
     background-position: center;
     background-attachment: fixed;
-    @include xs {
-    background-attachment: initial;
-    }
+   
     &::after {
         content: "";
         display: block;
@@ -560,6 +558,7 @@
     .scwooder {
         --pd-wooder: 90px 0 100px;
         padding: var(--pd-wooder);
+        background-attachment: initial;
         &__heading {
             .title-h3 {
                 color: var(--brown-cl);
