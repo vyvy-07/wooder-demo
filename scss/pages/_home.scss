@@ -486,17 +486,9 @@
     height: 100%;
     background-position: center;
     background-attachment: fixed;
-    // @include xs {
-    //     &__heading {
-    //         .title-h3 {
-    //             color: var(--brown-cl);
-    //         }
-    //         &-btn {
-    //             line-height: 38px;
-    //             padding: 0 20px;
-    //         }
-    //     }
-    // }
+    @include xs {
+    background-attachment: initial;
+    }
     &::after {
         content: "";
         display: block;
